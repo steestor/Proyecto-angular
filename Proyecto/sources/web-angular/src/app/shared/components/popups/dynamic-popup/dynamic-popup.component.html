@@ -1,0 +1,5 @@
+<app-popup [title]="title" [(visible)]="popupVisible" [minHeight]="minHeight" [dragEnabled]="dragEnabled"
+    [resizeEnabled]="resizeEnabled" [closeOnOutsideClick]="closeOnOutsideClick" [width]="width" [height]="height"
+    [toolbarItems]="toolbarItems" (onHidden)="hidden($event)">
+    <iti-dynamic-load></iti-dynamic-load>
+</app-popup>

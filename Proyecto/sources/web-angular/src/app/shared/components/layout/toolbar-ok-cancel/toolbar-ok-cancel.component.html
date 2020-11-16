@@ -1,0 +1,7 @@
+<div class="toolbar-ok-cancel-bottom" [ngClass]="{'fixed-bottom': fixedBottom}">
+    <div class="row d-flex flex-row-reverse align-self-end">
+        <dx-button type="default" [text]="'cancel' | i18n" stylingMode="text" (onClick)="cancel()"></dx-button>
+        <dx-button type="default" [text]="'save' | i18n" stylingMode="text" [useSubmitBehavior]="true" (onClick)="ok()">
+        </dx-button>
+    </div>
+</div>

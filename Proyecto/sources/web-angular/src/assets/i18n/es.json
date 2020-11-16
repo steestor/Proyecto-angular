@@ -1,0 +1,93 @@
+{
+    "loading": "Cargando",
+    "code": "Código",
+    "name": "Nombre",
+    "description": "Descripción",
+    "configuration": "Configuración",
+    "text": "Texto",
+    "ok": "Aceptar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "search": "Búsqueda...",
+    "remove_ok": "Eliminado correctamente",
+    "menu": {
+        "home": "Inicio",
+        "configuration": "Configuración",
+        "administration": "Administración",
+        "roles": "Roles",
+        "users": "Usuarios",
+        "scheduled-tasks": "Tareas programadas"
+    },
+    "header": {
+        "logout": "Salir"
+    },
+    "languages" : {
+        "es": "Español",
+        "en": "Inglés"
+    },
+    "login": {
+        "user": "Usuario",
+        "password": "Contraseña",
+        "login": "Entrar",
+        "user_required": "Usuario obligatorio",
+        "password_required": "Contraseña obligatoria",
+        "incorrect": "Usuario o contraseña incorrecta",
+        "error": "Imposible conectar, reinténtelo más tarde",
+        "passwordExpired": "Su contraseña ha caducado, debe cambiarla",
+        "passwordMustChange": "Debe cambiar su contraseña",
+        "passwordExpireInNDays": "Su contraseña caduca en {0} dias, ¿quiere cambiarla ahora?"
+    },
+    "changePassword": {
+        "title": "Cambiar contraseña",
+        "currentPassword": "Contraseña actual",
+        "newPassword": "Nueva contraseña",
+        "repeatPassword": "Repita contraseña",
+        "passwordNotMatch": "La contraseña repetida no coincide",
+        "passwordChanged": "Su contraseña se ha cambiado correctamente",
+        "passwordNotChanged": "No se ha podido cambiar su contraseña"
+    },
+    "roles": {
+        "title": "Roles",
+        "name": "Nombre",
+        "description": "Descripción"
+    },
+    "users": {
+        "title": "Usuarios",
+        "popup_title": "Usuario",
+        "user_name": "Usuario",
+        "name": "Nombre",
+        "phone_number": "Teléfono",
+        "email": "Email",
+        "active": "Activo",
+        "active_true": "Activo",
+        "active_false": "No activo",
+        "change_password": "Cambiar contraseña",
+        "change_password_user": "Cambiar contraseña usuario: ",
+        "password": "Contraseña",
+        "password_repeat": "Repetir contraseña",
+        "password_validation_compare": "Contraseña debe ser igual a Repetir contraseña",
+        "current_password": "Contraseña actual",
+        "password_change_successfully": "Contraseña cambiada correctamente",
+        "user_saved_successfully": "Usuario guardado correctamente",
+        "user_deleted_successfully": "Usuario borrado correctamente"
+    },
+    "errors": {
+        "401": "Es necesario renovar sus credenciales"
+    },
+    "validations": {
+        "required": "{0} es obligatorio",
+        "compare": "El valor de {0} debe ser mayor que el valor de Inicio"
+    },
+    "scheduled_tasks": {
+        "scheduled_task": "Tarea programada",
+        "name": "Nombre",
+        "identifier": "Identificador",
+        "task": "Tarea",
+        "timeout": "Timeout",
+        "cron": "Cron",
+        "isActive": "Activo",
+        "isRunning": "En ejecución",
+        "start": "Iniciar",
+        "stop": "Detener"
+    }
+}

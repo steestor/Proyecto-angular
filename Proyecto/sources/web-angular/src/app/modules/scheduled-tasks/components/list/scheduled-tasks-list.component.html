@@ -1,0 +1,17 @@
+<app-card title="menu.scheduled-tasks">
+    <dx-data-grid [dataSource]="scheduledTasks" [columns]="columns"
+        (onToolbarPreparing)="onToolbarPreparing($event)"
+        (onRowRemoved)="onRowRemoved($event)">
+        <dxo-editing mode="row" allowDeleting="true">
+        </dxo-editing>
+        <dxo-filter-row visible="true"></dxo-filter-row>
+        <dxo-header-filter visible="true"></dxo-header-filter>
+        <dxo-search-panel visible="true" [width]="240" placeholder="{{ 'search' | i18n }}"></dxo-search-panel>
+
+        <div *dxTemplate="let data of 'cellTemplate'">
+            <div class="dx-icon-{{data.data.activeIcon}}">
+            </div>
+        </div>
+
+    </dx-data-grid>
+</app-card>

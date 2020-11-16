@@ -1,0 +1,1 @@
+export { ItiMessage } from './message';

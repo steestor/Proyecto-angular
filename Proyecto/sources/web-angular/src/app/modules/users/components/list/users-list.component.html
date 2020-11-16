@@ -1,0 +1,20 @@
+<app-card title="menu.users">
+    <dx-data-grid [dataSource]="users" [columns]="columns" (onRowUpdated)="rowUpdated($event)"
+        (onRowInserted)="rowInserted($event)" (onRowRemoved)="rowRemoved($event)" (onInitNewRow)="onInitNewRow($event)">
+        <dxo-editing mode="popup" allowUpdating="true" allowDeleting="true" allowAdding="true">
+            <dxo-popup title="{{ 'users.popup_title' | i18n }}" [showTitle]="true" [width]="700" [height]="450">
+            </dxo-popup>
+        </dxo-editing>
+        <dxo-filter-row visible="true"></dxo-filter-row>
+        <dxo-header-filter visible="true"></dxo-header-filter>
+        <dxo-search-panel visible="true" [width]="240" placeholder="{{ 'search' | i18n }}"></dxo-search-panel>
+
+        <div *dxTemplate="let data of 'cellTemplate'">
+            <div title="{{'users.active_' + data.data.IsActive | i18n }}" class="dx-icon-{{data.data.activeIconName}}">
+            </div>
+        </div>
+    </dx-data-grid>
+
+</app-card>
+
+<app-dynamic-popup #userPopup [width]="720" [height]="280"></app-dynamic-popup>

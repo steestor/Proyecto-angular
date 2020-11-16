@@ -1,0 +1,7 @@
+<dx-popup [showTitle]="showTitle" [title]="title" [minHeight]="minHeight" [dragEnabled]="dragEnabled"
+    [resizeEnabled]="resizeEnabled" [closeOnOutsideClick]="closeOnOutsideClick" [(visible)]="visible" [width]="width"
+    [height]="height" [toolbarItems]="toolbarItems" (onHidden)="hidden($event)">
+    <div *dxTemplate="let data of 'content'">
+        <ng-content></ng-content>
+    </div>
+</dx-popup>

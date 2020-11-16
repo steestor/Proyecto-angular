@@ -1,0 +1,93 @@
+{
+    "loading": "Loading",
+    "code": "Code",
+    "name": "Nombre",
+    "description": "Descripción",
+    "configuration": "Configuration",
+    "text": "Text",
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "save": "Save",
+    "search": "Search...",
+    "remove_ok": "Removed Ok",
+    "menu": {
+        "home": "Home",
+        "configuration": "Configuration",
+        "administration": "Administration",
+        "roles": "Roles",
+        "users": "Users",
+        "scheduled-tasks": "Scheduled Tasks"
+    },
+    "header": {
+        "logout": "Logout"
+    },
+    "languages" : {
+        "es": "Spanish",
+        "en": "English"
+    },
+    "login": {
+        "user": "Login",
+        "password": "Password",
+        "login": "login",
+        "user_required": "User required",
+        "password_required": "Password required",
+        "incorrect": "User o password incorrect",
+        "error": "Unable to connect, try later",
+        "passwordExpired": "Your password has expired, you must change it",
+        "passwordMustChange": "You must change your password",
+        "passwordExpireInNDays": "Your password expire on {0} days, ¿do you want to change it now?"
+    },
+    "changePassword": {
+        "title": "Change password",
+        "currentPassword": "Current password",
+        "newPassword": "New password",
+        "repeatPassword": "Repeat password",
+        "passwordNotMatch": "Confirm password do not match",
+        "passwordChanged": "Your password has been changed",
+        "passwordNotChanged": "Your password has not been changed"
+    },
+    "roles": {
+        "title": "Roles",
+        "name": "Name",
+        "description": "Description"
+    },
+    "users": {
+        "title": "Users",
+        "popup_title": "User",
+        "user_name": "User",
+        "name": "Name",
+        "phone_number": "Phone",
+        "email": "Email",
+        "active": "Active",
+        "active_true": "Active",
+        "active_false": "Not active",
+        "change_password": "Change password",
+        "change_password_user": "Change user password: ",
+        "password": "Password",
+        "password_repeat": "Repeat password",
+        "password_validation_compare": "Password should be equal to Repeat password",
+        "current_password": "Current password",
+        "password_change_successfully": "Password changed successfully",
+        "user_saved_successfully": "User successfully saved",
+        "user_deleted_successfully": "User successfully deleted"
+    },
+    "errors": {
+        "401": "You need to renew your credentials"
+    },
+    "validations": {
+        "required": "{0} is required",
+        "compare": "El valor de {0} debe ser mayor que el valor de Inicio"
+    },
+    "scheduled_tasks": {
+        "scheduled_task": "Scheduled Task",
+        "name": "Name",
+        "identifier": "Identifier",
+        "task": "Task",
+        "timeout": "Timeout",
+        "cron": "Cron",
+        "isActive": "Active",
+        "isRunning": "Running",
+        "start": "Start",
+        "stop": "Stop"
+    }    
+}

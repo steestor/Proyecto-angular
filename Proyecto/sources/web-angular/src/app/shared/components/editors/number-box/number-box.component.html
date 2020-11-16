@@ -1,0 +1,22 @@
+<div class="form-group">
+    <label>{{label | i18n}}</label>
+    <dx-number-box 
+        [(value)]="value" 
+        [disabled]="disabled" 
+        [showSpinButtons]="showSpinButtons"
+        [showClearButton]="showClearButton" 
+        [format]="format"
+        [width]="width"
+        [hint]="hint"
+        [placeholder]="placeholder"
+        [min]="min"
+        [max]="max"
+        [stylingMode]="stylingMode"
+        [valueChangeEvent]="valueChangeEvent"
+        (onEnterKey)="enterKey($event)"
+        (onFocusIn)="focusIn($event)" 
+        (onFocusOut)="focusOut($event)"
+        (onValueChanged)="valueChanged($event)">
+        <dx-validator [validationRules]="validationRules"></dx-validator>
+    </dx-number-box>
+</div>

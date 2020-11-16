@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Proyecto.DataBaseInitialization": {
+      "commandName": "Project",
+      "commandLineArgs": "-cs=\"Server=.\\SQLEXPRESS;Database=ITICoreTemplate;User ID=stella;Password=stella;MultipleActiveResultSets=true\" -m=\"Test\""
+    }
+  }
+}

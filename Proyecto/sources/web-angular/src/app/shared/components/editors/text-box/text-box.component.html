@@ -1,0 +1,18 @@
+<div class="form-group">
+    <label>{{label | i18n}}</label>
+    <dx-text-box 
+        [(value)]="value" 
+        [disabled]="disabled"
+        [showClearButton]="showClearButton"
+        [mask]="mask"
+        [width]="width"
+        [hint]="hint"
+        [placeholder]="placeholder"
+        [stylingMode]="stylingMode"
+        (onEnterKey)="enterKey($event)"
+        (onFocusIn)="focusIn($event)" 
+        (onFocusOut)="focusOut($event)"
+        (onValueChanged)="valueChanged($event)">
+        <dx-validator [validationRules]="validationRules"></dx-validator>
+    </dx-text-box>
+</div>

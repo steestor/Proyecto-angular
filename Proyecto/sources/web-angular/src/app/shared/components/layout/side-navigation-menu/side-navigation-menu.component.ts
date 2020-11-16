@@ -1,0 +1,83 @@
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
+import { DxTreeViewComponent } from 'devextreme-angular/ui/tree-view';
+import * as events from 'devextreme/events';
+
+
+@Component({
+  selector: 'app-side-navigation-menu',
+  templateUrl: './side-navigation-menu.component.html',
+  styleUrls: ['./side-navigation-menu.component.scss']
+})
+export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy {
+  @ViewChild(DxTreeViewComponent, { static: true })
+  menu: DxTreeViewComponent;
+
+  @Output()
+  selectedItemChanged = new EventEmitter<string>();
+
+  @Output()
+  openMenu = new EventEmitter<any>();
+
+  @Input()
+  items: any[];
+
+  @Input()
+  set selectedItem(value: string) {
+    if (this.menu.instance) {
+      this.menu.instance.selectItem(value);
+    }
+  }
+
+  private CompactMode = false;
+  @Input()
+  get compactMode() {
+    return this.CompactMode;
+  }
+  set compactMode(val) {
+    this.CompactMode = val;
+    if (val && this.menu.instance) {
+      this.menu.instance.collapseAll();
+    }
+  }
+
+  constructor(private elementRef: ElementRef) { }
+
+  updateSelection(event) {
+    const nodeClass = 'dx-treeview-node';
+    const selectedClass = 'dx-state-selected';
+    const leafNodeClass = 'dx-treeview-node-is-leaf';
+    const element: HTMLElement = event.element;
+
+    const rootNodes = element.querySelectorAll(`.${nodeClass}:not(.${leafNodeClass})`);
+    Array.from(rootNodes).forEach(node => {
+      node.classList.remove(selectedClass);
+    });
+
+    let selectedNode = element.querySelector(`.${nodeClass}.${selectedClass}`);
+    while (selectedNode && selectedNode.parentElement) {
+      if (selectedNode.classList.contains(nodeClass)) {
+        selectedNode.classList.add(selectedClass);
+      }
+
+      selectedNode = selectedNode.parentElement;
+    }
+  }
+
+  onItemClick(event) {
+    this.selectedItemChanged.emit(event);
+  }
+
+  onMenuInitialized(event) {
+    event.component.option('deferRendering', false);
+  }
+
+  ngAfterViewInit() {
+    events.on(this.elementRef.nativeElement, 'dxclick', (e) => {
+      this.openMenu.next(e);
+    });
+  }
+
+  ngOnDestroy() {
+    events.off(this.elementRef.nativeElement, 'dxclick');
+  }
+}

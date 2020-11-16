@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestEntity\**" />
+    <EmbeddedResource Remove="TestEntity\**" />
+    <None Remove="TestEntity\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ITI.Core.Features.Application" Version="2.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.5.0" />
+        <PackageReference Include="ITI.Core" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Proyecto.Domain\Proyecto.Domain.csproj" />
+    <ProjectReference Include="..\Proyecto.Persistence.EntityFramework\Proyecto.Persistence.EntityFramework.csproj" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Identity\IdentityResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IdentityResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Identity\IdentityResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IdentityResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

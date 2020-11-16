@@ -1,0 +1,41 @@
+<app-card title="scheduled_tasks.scheduled_task">
+    <form action="your-action" (ngSubmit)="onSubmit($event)" class="form">
+        <div class="row">
+            <div class="col-9">
+                <app-text-box label="name" appAutoFocus [(value)]="scheduledTask.Name"
+                    [validationRules]="[{type: 'required'}]">
+                </app-text-box>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <app-select-box label="scheduled_tasks.task" 
+                    [items]="backgroundTasks" valueExpr="Identifier" displayExpr="Description"
+                    [(value)]="scheduledTask.Identifier"
+                    [validationRules]="[{type: 'required'}]">
+                </app-select-box>
+            </div>
+            <div class="col-3">
+                <app-number-box label="scheduled_tasks.timeout" [(value)]="scheduledTask.Timeout"
+                    [validationRules]="[{type: 'required'}]">
+                </app-number-box>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <app-text-box label="scheduled_tasks.cron" [(value)]="scheduledTask.Cron"
+                    [validationRules]="[{type: 'required'}]">
+                </app-text-box>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <app-check-box [value]="scheduledTask.IsActive" [text]="'scheduled_tasks.isActive' | i18n">
+                </app-check-box>
+            </div>
+        </div>
+
+        <app-toolbar-ok-cancel (onCancel)="cancel()"></app-toolbar-ok-cancel>
+
+    </form>
+</app-card>

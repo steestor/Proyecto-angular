@@ -1,0 +1,26 @@
+@import "../../../../themes/generated/variables.base.scss";
+
+:host {
+  background-color: darken($base-bg, 5.00);
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+
+  .title {
+    color: $base-accent;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0;
+  }
+}
+
+.errorLogin {
+  margin-top: 6px;
+  font-size: 13px;
+  padding: 10px;
+}

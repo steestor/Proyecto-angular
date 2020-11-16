@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proyecto.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Proyecto.Api.Controllers.LoginController">
+            <summary>
+            Api para iniciar sesión en la aplicación
+            </summary>
+        </member>
+        <member name="M:Proyecto.Api.Controllers.LoginController.#ctor(Proyecto.Application.Authentication.Services.Interfaces.ILoginService)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="loginService"></param>
+        </member>
+        <member name="M:Proyecto.Api.Controllers.LoginController.Post(Proyecto.Application.Authentication.Dtos.LoginDto)">
+            <summary>
+            Valida las credenciales del usuario y genera un token.
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Proyecto.Api.Controllers.SignalRController">
+            <summary>
+            Api para iniciar sesión en la aplicación
+            </summary>
+        </member>
+        <member name="M:Proyecto.Api.Controllers.SignalRController.#ctor(ITI.Core.RealTime.IBroadcastService)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="broadcastService"></param>
+        </member>
+        <member name="T:Proyecto.WebApi.Controllers.PingController">
+            <summary>
+            Api para validar la conexión con el servidor.
+            </summary>
+        </member>
+        <member name="M:Proyecto.WebApi.Controllers.PingController.#ctor(ITI.Core.Runtime.IPrincipalAccessor)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="principalAccessor"></param>
+        </member>
+        <member name="M:Proyecto.WebApi.Controllers.PingController.Get">
+            <summary>
+            Obtiene un OK para el usuario autenticado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Proyecto.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>

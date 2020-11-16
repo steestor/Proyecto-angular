@@ -1,0 +1,36 @@
+<app-single-card>
+    <dx-validation-group>
+        <div class="login-header">
+            <img src='{{logo}}' />
+            <div class="title">{{title}}</div>
+        </div>
+        <div class="dx-field">
+            <dx-text-box [(value)]="credentials.userName" app-autofocus
+                placeholder="{{ 'login.user' | i18n }}" width="100%">
+                <dx-validator>
+                    <dxi-validation-rule type="required" message="{{ 'login.user_required' | i18n }}">
+                    </dxi-validation-rule>
+                </dx-validator>
+            </dx-text-box>
+        </div>
+        <div class="dx-field">
+            <dx-text-box mode="password" [(value)]="credentials.pwd" placeholder="{{ 'login.password' | i18n }}"
+                width="100%">
+                <dx-validator>
+                    <dxi-validation-rule type="required" message="{{ 'login.password_required' | i18n }}">
+                    </dxi-validation-rule>
+                </dx-validator>
+            </dx-text-box>
+        </div>
+        <div class="dx-field">
+            <dx-button type="default" text="{{ 'login.login' | i18n }}" (onClick)="onLoginClick($event)" width="100%">
+            </dx-button>
+        </div>
+    </dx-validation-group>
+
+    <div *ngIf="loginMessage && !loginInProgress">
+        <div class="alert alert-danger errorLogin" role="alert">
+            {{ loginMessage }}
+        </div>
+    </div>
+</app-single-card>
